@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - YZ-Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .notification-overlay-contact {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .notification-box-contact {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .notification-overlay-contact.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .notification-overlay-contact.show .notification-box-contact {
+            transform: scale(1);
+        }
+        .notification-icon-contact {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: var(--success-color); /* Couleur verte pour succès */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" id="logo">YZ-Blog</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li> <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="admin/login.html">Admin</a></li>
+                </ul> </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="page-content">
+                <h1>Contactez-nous</h1>
+                <p>Vous avez une question, une suggestion ou vous souhaitez simplement dire bonjour ? Utilisez le formulaire ci-dessous ou nos coordonnées.</p>
+
+                <div class="contact-form-container" style="margin-top:30px; background-color: var(--light-bg); padding:20px; border-radius:var(--border-radius);">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contact-name">Votre Nom :</label> <input type="text" id="contact-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Votre Email :</label> <input type="email" id="contact-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Sujet :</label> <input type="text" id="contact-subject" name="subject" required>
+                        </div>
+                        <div class="form-group"> <label for="contact-message">Votre Message :</label>
+                            <textarea id="contact-message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le Message</button> </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYearDynamic"></span> YZ-Blog - Tous droits réservés</p> </footer>
+
+    <div id="notificationOverlayContact" class="notification-overlay-contact">
+        <div class="notification-box-contact">
+            <div id="notificationIconContact" class="notification-icon-contact">&#10004;</div> <p id="notificationMessageContact">Message envoyé</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('currentYearDynamic').textContent = new Date().getFullYear(); // [cite: 312]
+
+        // MODIFICATION : Script pour gérer l'envoi du formulaire et afficher la notification [cite: 5]
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Empêche l'envoi réel du formulaire pour la démo
+
+            // Récupérer les valeurs (pour une future implémentation backend)
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+
+            // Validation simple (peut être étendue)
+            if (!name || !email || !subject || !message) {
+                alert("Veuillez remplir tous les champs obligatoires.");
+                return;
+            }
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                alert("Veuillez entrer une adresse email valide.");
+                return;
+            }
+
+            // Afficher la notification
+            const overlay = document.getElementById('notificationOverlayContact');
+            overlay.classList.add('show');
+
+            // Cacher la notification après quelques secondes
+            setTimeout(() => {
+                overlay.classList.remove('show');
+            }, 3000); // Afficher pendant 3 secondes
+
+            this.reset(); // Réinitialiser le formulaire
+            // Dans une application réelle, ici vous enverriez les données à un backend.
+            // console.log("Formulaire soumis (simulation)", { name, email, subject, message });
+        });
+    </script>
+</body>
+</html>
