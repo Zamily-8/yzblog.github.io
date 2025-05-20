@@ -1,15 +1,3 @@
-/* admin/admin.css */
-
-/*
-    COMMENTAIRE : Image de fond pour la section Admin (optionnel)
-    Si vous voulez une ambiance différente pour l'admin, vous pouvez ajouter un fond ici.
-    Par exemple, une texture discrète ou une couleur de fond légèrement différente. [cite: 10]
- .admin-section {
-        background-color: #e9ecef; [cite: 11]
-        /* Un gris très clair */ /* [cite: 12] */
-    }
-    */
-    
     .admin-header {
         display: flex;
         justify-content: space-between;
@@ -20,7 +8,7 @@
     }
     
     .admin-header h2 {
-        margin-bottom: 0; /* Annuler la marge par défaut */ /* [cite: 14] */
+        margin-bottom: 0;
     }
     
     .admin-section {
@@ -40,25 +28,25 @@
     }
     
     .table-responsive {
-        overflow-x: auto; /* Permet le défilement horizontal sur petits écrans */ /* [cite: 17] */
+        overflow-x: auto;
     }
     
     table {
         width: 100%;
         border-collapse: collapse;
         margin-bottom: 20px;
-        font-size: 0.95em; [cite: 18]
+        font-size: 0.95em;
     }
     
     thead {
-        background-color: var(--secondary-color); /* Utilisation de la couleur secondaire */
+        background-color: var(--secondary-color); 
         color: var(--text-on-dark);
-    } /* [cite: 19] */
+    } 
     
     th, td {
-        padding: 12px 15px; /* Plus d'espacement */
+        padding: 12px 15px; 
         border: 1px solid var(--border-color);
-        text-align: left; [cite: 20]
+        text-align: left;
         vertical-align: middle;
     }
     
@@ -67,32 +55,31 @@
     }
     
     tr:nth-child(even) {
-        background-color: #f9f9f9; /* Fond légèrement différent pour lignes paires */ /* [cite: 21] */
+        background-color: #f9f9f9;
     }
     
     tr:hover {
-        background-color: #f1f1f1; /* Survol pour une meilleure lisibilité */ /* [cite: 22] */
+        background-color: #f1f1f1; 
     }
     
     td.actions {
-        text-align: center; /* Centrer les boutons d'action */ /* [cite: 23] */
-        white-space: nowrap; /* Empêcher le retour à la ligne des boutons */ /* [cite: 24] */
+        text-align: center;
+        white-space: nowrap; 
     }
     
     td.actions .btn {
-        padding: 6px 10px; /* Boutons plus petits dans le tableau */ /* [cite: 25] */
+        padding: 6px 10px;
         margin: 0 3px;
-        font-size: 0.9em; /* [cite: 26] */
-        /* NOUVEAU: pour aligner l'icône et le texte si vous en ajoutez */
+        font-size: 0.9em; 
         display: inline-flex;
         align-items: center;
         gap: 5px;
     }
     
-    td.actions .btn img.icon-local { /* NOUVEAU: Style pour les icônes locales */
-        width: 16px; /* Ajustez la taille selon vos icônes */
-        height: 16px; /* Ajustez la taille selon vos icônes */
-        margin-right: 0; /* Annule la marge si FontAwesome est aussi utilisé */
+    td.actions .btn img.icon-local {
+        width: 16px;
+        height: 16px; 
+        margin-right: 0;
     }
     
     
