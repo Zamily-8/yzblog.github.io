@@ -7,7 +7,7 @@
     --header-footer-bg: #454545;
     --text-on-dark: white;
     --text-on-light: #333;
-    --body-bg: #f0f4f8; /* Bleu très clair et doux */
+    --body-bg: #f0f4f8;
     --light-bg: white;
     --border-color: #ddd;
     --shadow-color: rgba(0, 0, 0, 0.1);
@@ -17,7 +17,7 @@
     --font-primary: 'Roboto', 'Open Sans', Arial, sans-serif;
     --base-font-size: 16px;
     --container-width: 1200px;
-    --border-radius: 8px; /* Rayon de bordure modernisé */
+    --border-radius: 8px;
 }
 
 * {
@@ -32,7 +32,7 @@ body {
     line-height: 1.6;
     background-color: var(--body-bg);
     color: var(--text-on-light);
-    padding-top: 80px; /* Hauteur du header fixe */
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -48,7 +48,7 @@ body {
 header {
     background-color: var(--header-footer-bg);
     color: var(--text-on-dark);
-    padding: 15px 0; /* Ajusté pour centrer le contenu avec .container */
+    padding: 15px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -76,13 +76,12 @@ header .header-content {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px; /* Espacement modernisé */
-}
+    gap: 15px;
 
 nav a {
     color: var(--text-on-dark);
     text-decoration: none;
-    padding: 8px 15px; /* Padding uniforme */
+    padding: 8px 15px; 
     border-radius: var(--border-radius);
     transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: 500;
@@ -136,16 +135,16 @@ nav a:hover, nav a.active {
 
 
 main {
-    flex-grow: 1; /* Permet au footer de rester en bas */
-    padding: 30px 0; /* Ajusté pour utiliser .container à l'intérieur */
+    flex-grow: 1;
+    padding: 30px 0;
 }
 
 footer {
     background-color: var(--header-footer-bg);
     color: var(--text-on-dark);
     text-align: center;
-    padding: 20px 0; /* Padding uniforme */
-    margin-top: auto; /* S'assure qu'il est en bas si le contenu est court */
+    padding: 20px 0;
+    margin-top: auto;
 }
 
 h1, h2, h3 {
@@ -199,7 +198,7 @@ h3 { font-size: 1.4em; }
 }
 
 .form-group input[type="file"] {
-    padding: 8px; /* Ajustement spécifique pour file input */
+    padding: 8px;
 }
 
 body {
