@@ -4,37 +4,37 @@
     background-color: var(--light-bg);
     padding: 30px;
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 10px var(--shadow-color); /* [cite: 147] */
+    box-shadow: 0 2px 10px var(--shadow-color);
     margin-bottom: 40px;
 }
 
 .article-header {
-    margin-bottom: 25px; /* [cite: 148] */
+    margin-bottom: 25px;
 }
 
 .article-header h1 {
     color: var(--primary-color);
-    font-size: 2.5em; /* Titre plus grand pour l'article */ /* [cite: 149] */
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
 .article-meta {
     font-size: 0.9em;
-    color: #777; /* [cite: 150] */
+    color: #777;
     margin-bottom: 20px;
 }
 .article-meta span {
     margin-right: 15px;
 }
 .article-meta i {
-    margin-right: 5px; /* [cite: 151] */
+    margin-right: 5px;
 }
 
 
 .article-image-container {
     width: 100%;
-    overflow: visible; /* on enlève la coupure */
-    max-height: none;   /* pas de hauteur limite */
+    overflow: visible;
+    max-height: none; 
     margin-bottom: 30px;
 }
 
@@ -42,16 +42,16 @@
     width: auto;
     height: auto;
     max-width: 100%;
-    object-fit: contain; /* affiche toute l'image sans la rogner */
+    object-fit: contain;
     display: block;
     margin: 0 auto;
 }
 
 
 .article-content {
-    font-size: 1.4em; /* Taille de police confortable pour la lecture */ /* [cite: 161] */
+    font-size: 1.4em;
     line-height: 1.7;
-    color: #444; /* [cite: 162] */
+    color: #444;
 }
 
 .article-content p {
@@ -60,7 +60,7 @@
 
 .article-content h2, .article-content h3, .article-content h4 {
     color: var(--secondary-color);
-    margin-top: 1.5em; /* [cite: 163] */
+    margin-top: 1.5em;
     margin-bottom: 0.7em;
 }
 
@@ -68,13 +68,13 @@
     border-left: 4px solid var(--primary-color);
     margin: 1.5em 0;
     padding: 0.5em 1em;
-    background-color: #f9f9f9; /* [cite: 164] */
+    background-color: #f9f9f9;
     font-style: italic;
 }
 
 .article-content ul, .article-content ol {
     margin-bottom: 1em;
-    padding-left: 1.5em; /* [cite: 165] */
+    padding-left: 1.5em;
 }
 
 .article-source {
@@ -82,7 +82,7 @@
     padding-top: 15px;
     border-top: 1px solid var(--border-color);
     font-size: 1 em;
-    color: #777; /* [cite: 166] */
+    color: #777;
 }
 
 .article-source a {
@@ -90,7 +90,7 @@
     text-decoration: none;
 }
 .article-source a:hover {
-    text-decoration: underline; /* [cite: 167] */
+    text-decoration: underline;
 }
 
 /* Section Commentaires */
@@ -98,7 +98,7 @@
     background-color: var(--light-bg);
     padding: 25px;
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px var(--shadow-color); /* [cite: 168] */
+    box-shadow: 0 2px 8px var(--shadow-color);
 }
 
 .comment-section h3, .comments-list h4 {
@@ -106,7 +106,7 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    gap: 8px; /* [cite: 169] */
+    gap: 8px;
 }
 
 #comment-form .form-group {
@@ -114,7 +114,7 @@
 }
 
 #comment-form button[type="submit"] {
-    margin-top: 10px; /* [cite: 170] */
+    margin-top: 10px;
 }
 
 .comments-list {
@@ -123,7 +123,7 @@
 
 .comment-item {
     border-bottom: 1px dashed var(--border-color);
-    padding: 15px 0; /* [cite: 171] */
+    padding: 15px 0;
 }
 .comment-item:last-child {
     border-bottom: none;
@@ -132,13 +132,13 @@
 .comment-author {
     font-weight: bold;
     color: var(--secondary-color);
-    margin-bottom: 5px; /* [cite: 172] */
+    margin-bottom: 5px;
 }
 .comment-author .comment-date {
     font-weight: normal;
     font-size: 0.85em;
     color: #888;
-    margin-left: 10px; /* [cite: 173] */
+    margin-left: 10px;
 }
 
 .comment-body {
@@ -149,18 +149,18 @@
 
 .no-comments {
     font-style: italic;
-    color: #888; /* [cite: 174] */
+    color: #888; 
 }
 
 @media (max-width: 768px) {
     .article-header h1 {
-        font-size: 2em; /* [cite: 175] */
+        font-size: 2em;
     }
     .article-content {
-        font-size: 1em; /* [cite: 176] */
+        font-size: 1em;
     }
     .article-complet {
-        padding: 20px; /* [cite: 177] */
+        padding: 20px;
     }
     /* Ajustement pour que l'image ne soit pas trop haute sur mobile */
     .article-image-container {
